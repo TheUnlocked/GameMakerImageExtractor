@@ -10,7 +10,6 @@ namespace GameMakerImageExtractor
         static void Main(string[] args)
         {
             BuildAvaloniaApp().Start<MainWindow>();
-            var selectExe = new OpenFileDialog();
         }
 
         public static AppBuilder BuildAvaloniaApp()

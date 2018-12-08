@@ -17,8 +17,11 @@
         </MenuItem>
       </MenuItem>
     </Menu>
-    <ListBox Name="ImageList" SelectionMode="Single" Width="300" DockPanel.Dock="Left">
-    </ListBox>
+    <DockPanel DockPanel.Dock="Left">
+      <ProgressBar IsIndeterminate="True" IsVisible="False" Name="LoadingProgress" DockPanel.Dock="Top"></ProgressBar>
+      <ListBox Name="ImageList" SelectionMode="Single" Width="300" DockPanel.Dock="Bottom">
+      </ListBox>
+    </DockPanel>
     <Image Name="ImageBox" DockPanel.Dock="Right">
     </Image>
   </DockPanel>

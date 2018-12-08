@@ -25,6 +25,7 @@ namespace GameMakerImageExtractor
         {
             AvaloniaXamlLoader.Load(this);
             imageList = this.FindControl<ListBox>("ImageList");
+            loadingProgress = this.FindControl<ProgressBar>("LoadingProgress");
             imageList.SelectionChanged += ImageList_SelectionChanged;
             this.Find<MenuItem>("Open").Click += Open_ClickAsync;
             this.Find<MenuItem>("ExtractOne").Click += async (sender, args) =>
@@ -78,6 +79,11 @@ namespace GameMakerImageExtractor
             List<string> images = new List<string>();
             List<string> imageNames = new List<string>();
 
+            if (files.Length == 0)
+                return;
+
+            loadingProgress.IsVisible = true;
+
             foreach (string filename in files)
             {
                 var matches = pngExpression.Matches(new string((await File.ReadAllBytesAsync(filename))
@@ -93,13 +99,18 @@ namespace GameMakerImageExtractor
 
             Images = images.ToArray();
             imageList.Items = imageNames;
+
+            loadingProgress.IsVisible = false;
         }
 
         private static string[] Images { get; set; }
         private ListBox imageList;
+        private ProgressBar loadingProgress;
 
         private void ImageList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (imageList.SelectedIndex == -1)
+                return;
             PopulateImage(Images[imageList.SelectedIndex]);
         }
 
