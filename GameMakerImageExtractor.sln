@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27009.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameMakerImageExtractor", "GameMakerImageExtractor\GameMakerImageExtractor.csproj", "{78FFA5A2-2051-49CA-9474-CC8DC5E52C6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78FFA5A2-2051-49CA-9474-CC8DC5E52C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FFA5A2-2051-49CA-9474-CC8DC5E52C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FFA5A2-2051-49CA-9474-CC8DC5E52C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FFA5A2-2051-49CA-9474-CC8DC5E52C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC0B707D-D007-4164-8D7B-3DBF42877A4C}
+	EndGlobalSection
+	GlobalSection(AvalonStudioProperties) = preSolution
+		StartupItem = {78FFA5A2-2051-49CA-9474-CC8DC5E52C6D}
+	EndGlobalSection
+EndGlobal

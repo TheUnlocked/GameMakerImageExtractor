@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game Maker Image Extractor">
+  <DockPanel>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="_File">
+        <MenuItem Header="_Open..." Name="Open">
+
+        </MenuItem>
+      </MenuItem>
+      <MenuItem Header="_Extract">
+        <MenuItem Header="_Extract..." Name="ExtractOne">
+
+        </MenuItem>
+        <MenuItem Header="_Extract All..." Name="ExtractAll">
+
+        </MenuItem>
+      </MenuItem>
+    </Menu>
+    <ListBox Name="ImageList" SelectionMode="Single" Width="300" DockPanel.Dock="Left">
+    </ListBox>
+    <Image Name="ImageBox" DockPanel.Dock="Right">
+    </Image>
+  </DockPanel>
+</Window>
